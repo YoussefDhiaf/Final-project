@@ -1,0 +1,212 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Light background color */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #3c3f4a; /* Dark background for header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: relative;
+    text-align: center;
+}
+
+.slideshow img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.slideshow img:first-child {
+    display: block;
+}
+
+.slideshow button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.slideshow .prev {
+    left: 10px;
+}
+
+.slideshow .next {
+    right: 10px;
+}
+
+.slideshow button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.featured-artists,
+.marketplace,
+.gallery,
+.mint,
+.community {
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.artist-list,
+.nft-list,
+.gallery-grid,
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align items */
+}
+
+.artist-item,
+.nft-item,
+.art-piece,
+.event-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(30% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.artist-item:hover,
+.nft-item:hover,
+.art-piece:hover,
+.event-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #3c3f4a; /* Dark background for footer */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.mint form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mint label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mint input,
+.mint textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.mint button {
+    padding: 10px 15px;
+    background: #3c3f4a; /* Button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mint button:hover {
+    background: #f39c12; /* Button hover color */
+}
+
+.event-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Rounded corners for event images */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .artist-item,
+    .nft-item,
+    .art-piece,
+    .event-item {
+        width: calc(45% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 10px 0;
+    }
+
+    .artist-item,
+    .nft-item,
+    .art-piece,
+    .event-item {
+        width: 100%; /* Full width for mobile */
+    }
+}
